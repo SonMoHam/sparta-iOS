@@ -70,7 +70,8 @@ class ViewController: UIViewController {
     }
     @IBAction func segmentValueChanged(_ sender: Any) {
         print(timerSegment.selectedSegmentIndex)
-        
+        resetTimer()
+        setTimerSeconds()
     }
     
     @IBAction func timerButtonClicked(_ sender: Any) {
