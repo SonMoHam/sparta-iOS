@@ -14,6 +14,11 @@
 		127FA1112691927A00A4B86C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 127FA1102691927A00A4B86C /* Assets.xcassets */; };
 		127FA1142691927A00A4B86C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 127FA1122691927A00A4B86C /* LaunchScreen.storyboard */; };
 		127FA11E269192F000A4B86C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 127FA11D269192F000A4B86C /* Alamofire */; };
+		127FA12226919C8E00A4B86C /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 127FA12126919C8E00A4B86C /* SwiftyJSON */; };
+		127FA1552691B14E00A4B86C /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 127FA1542691B14E00A4B86C /* SDWebImage */; };
+		127FA1582691B2C900A4B86C /* MemoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127FA1572691B2C900A4B86C /* MemoCollectionViewController.swift */; };
+		127FA15B2691B2E300A4B86C /* MemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127FA15A2691B2E300A4B86C /* MemoCell.swift */; };
+		127FA15E2691C25100A4B86C /* MemoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127FA15D2691C25100A4B86C /* MemoDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +30,9 @@
 		127FA1102691927A00A4B86C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		127FA1132691927A00A4B86C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		127FA1152691927A00A4B86C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		127FA1572691B2C900A4B86C /* MemoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCollectionViewController.swift; sourceTree = "<group>"; };
+		127FA15A2691B2E300A4B86C /* MemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCell.swift; sourceTree = "<group>"; };
+		127FA15D2691C25100A4B86C /* MemoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +40,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				127FA1552691B14E00A4B86C /* SDWebImage in Frameworks */,
+				127FA12226919C8E00A4B86C /* SwiftyJSON in Frameworks */,
 				127FA11E269192F000A4B86C /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,6 +72,9 @@
 				127FA1092691927800A4B86C /* SceneDelegate.swift */,
 				127FA10B2691927800A4B86C /* ViewController.swift */,
 				127FA10D2691927800A4B86C /* Main.storyboard */,
+				127FA15D2691C25100A4B86C /* MemoDetailViewController.swift */,
+				127FA1572691B2C900A4B86C /* MemoCollectionViewController.swift */,
+				127FA15A2691B2E300A4B86C /* MemoCell.swift */,
 				127FA1102691927A00A4B86C /* Assets.xcassets */,
 				127FA1122691927A00A4B86C /* LaunchScreen.storyboard */,
 				127FA1152691927A00A4B86C /* Info.plist */,
@@ -87,6 +100,8 @@
 			name = NetworkingPractice;
 			packageProductDependencies = (
 				127FA11D269192F000A4B86C /* Alamofire */,
+				127FA12126919C8E00A4B86C /* SwiftyJSON */,
+				127FA1542691B14E00A4B86C /* SDWebImage */,
 			);
 			productName = NetworkingPractice;
 			productReference = 127FA1042691927800A4B86C /* NetworkingPractice.app */;
@@ -117,6 +132,8 @@
 			mainGroup = 127FA0FB2691927800A4B86C;
 			packageReferences = (
 				127FA11C269192F000A4B86C /* XCRemoteSwiftPackageReference "Alamofire" */,
+				127FA12026919C8E00A4B86C /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				127FA1532691B14E00A4B86C /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 127FA1052691927800A4B86C /* Products */;
 			projectDirPath = "";
@@ -146,7 +163,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				127FA10C2691927800A4B86C /* ViewController.swift in Sources */,
+				127FA15E2691C25100A4B86C /* MemoDetailViewController.swift in Sources */,
+				127FA15B2691B2E300A4B86C /* MemoCell.swift in Sources */,
 				127FA1082691927800A4B86C /* AppDelegate.swift in Sources */,
+				127FA1582691B2C900A4B86C /* MemoCollectionViewController.swift in Sources */,
 				127FA10A2691927800A4B86C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,6 +377,22 @@
 				minimumVersion = 5.4.3;
 			};
 		};
+		127FA12026919C8E00A4B86C /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+		127FA1532691B14E00A4B86C /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.11.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -364,6 +400,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 127FA11C269192F000A4B86C /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		127FA12126919C8E00A4B86C /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 127FA12026919C8E00A4B86C /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		127FA1542691B14E00A4B86C /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 127FA1532691B14E00A4B86C /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
