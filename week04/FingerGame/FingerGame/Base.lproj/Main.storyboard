@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Finger Start View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="FingerStartViewController" customModule="FingerGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="손가락 묶기 게임" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5wT-M5-UJr">
+                                <rect key="frame" x="116" y="104" width="182" height="34"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" name="myGreen"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTF-xR-gau">
+                                <rect key="frame" x="172" y="746" width="70" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="시작하기">
+                                    <color key="titleColor" name="myYellow"/>
+                                </state>
+                                <connections>
+                                    <segue destination="nue-vW-r1a" kind="presentation" id="URb-vU-gQC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5wT-M5-UJr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="Jg8-sM-c53"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WTF-xR-gau" secondAttribute="bottom" constant="80" id="Off-c7-9il"/>
+                            <constraint firstItem="WTF-xR-gau" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QZx-Qp-EPc"/>
+                            <constraint firstItem="5wT-M5-UJr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zqr-6C-07j"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141" y="129"/>
+        </scene>
+        <!--Finger Game View Controller-->
+        <scene sceneID="xpT-kq-lrM">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="nue-vW-r1a" customClass="FingerGameViewController" customModule="FingerGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CSU-FA-qZ1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yVq-Hv-lEd">
+                                <rect key="frame" x="20" y="30" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="JtE-v0-eEs"/>
+                                    <constraint firstAttribute="height" constant="40" id="Xhq-8e-XdY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="xmark" catalog="system"/>
+                                <connections>
+                                    <action selector="closeButtonClicked:" destination="nue-vW-r1a" eventType="touchUpInside" id="akV-Xa-qSK"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VTs-Mv-IUu">
+                                <rect key="frame" x="0.0" y="80" width="414" height="782"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eST-Aw-8xT"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yVq-Hv-lEd" firstAttribute="top" secondItem="CSU-FA-qZ1" secondAttribute="top" constant="30" id="5rP-in-iQP"/>
+                            <constraint firstItem="VTs-Mv-IUu" firstAttribute="trailing" secondItem="eST-Aw-8xT" secondAttribute="trailing" id="JAI-Ir-PDm"/>
+                            <constraint firstItem="VTs-Mv-IUu" firstAttribute="top" secondItem="yVq-Hv-lEd" secondAttribute="bottom" constant="10" id="NtV-m7-rC6"/>
+                            <constraint firstItem="VTs-Mv-IUu" firstAttribute="leading" secondItem="eST-Aw-8xT" secondAttribute="leading" id="ThL-72-kTp"/>
+                            <constraint firstItem="VTs-Mv-IUu" firstAttribute="bottom" secondItem="eST-Aw-8xT" secondAttribute="bottom" id="ezz-QX-GrS"/>
+                            <constraint firstItem="yVq-Hv-lEd" firstAttribute="leading" secondItem="eST-Aw-8xT" secondAttribute="leading" constant="20" id="zMW-9s-deW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gameView" destination="VTs-Mv-IUu" id="YxR-jV-o0a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lm3-Qn-tbp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="808.69565217391312" y="128.57142857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="myGreen">
+            <color red="0.61960784313725492" green="0.87058823529411766" blue="0.45098039215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="myYellow">
+            <color red="0.96862745098039216" green="0.91764705882352937" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
