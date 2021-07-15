@@ -68,7 +68,7 @@
                                     <action selector="closeButtonClicked:" destination="nue-vW-r1a" eventType="touchUpInside" id="akV-Xa-qSK"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VTs-Mv-IUu">
+                            <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VTs-Mv-IUu" customClass="FingerGameView" customModule="FingerGame" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="80" width="414" height="782"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
